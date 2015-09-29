@@ -24,7 +24,7 @@ Create a web serverthat can listen to requests for `/op/:operation/:number1/:num
   "solution": 300
 }
 ```
-Your program should work for `add`,`sub`,`mult`,`div` and return the appropriate solution. If `operation` is something other than these 4 values, you should use [`res.SendStatus`](http://expressjs.com/4x/api.html#res.sendStatus) to send an appropriate [error code](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). First, figure out the category of error code you need to send, then find an appropriate code using the provided link.
+Your program should work for `add`,`sub`,`mult`,`div` and return the appropriate solution. If `operation` is something other than these 4 values, you should use [`res.sendStatus`](http://expressjs.com/4x/api.html#res.sendStatus) to send an appropriate [error code](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). First, figure out the category of error code you need to send, then find an appropriate code using the provided link.
 
 ## Exercise 4: Fetching Data!
 Create a web server that will respond to requests for `/entry/:entryId` in the following way:
