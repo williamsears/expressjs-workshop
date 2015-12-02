@@ -9,13 +9,42 @@ app.get('/hello/:firstname', function (req, res) {
   res.send('<h1>Hello' + name + '</h1>');
 });
 app.get('/op/:operation/:number1/:number2', function (req, res) {
-  var name = {
+  var add = {
     operator: req.params.operation,
     operand1: parseInt(req.params.number1),
     operand2: parseInt(req.params.number2),
     solution: parseInt(req.params.number1) + parseInt(req.params.number2)
   }
-  res.send(name);
+    var sub = {
+    operator: req.params.operation,
+    operand1: parseInt(req.params.number1),
+    operand2: parseInt(req.params.number2),
+    solution: parseInt(req.params.number1) - parseInt(req.params.number2)
+  }
+    var div = {
+    operator: req.params.operation,
+    operand1: parseInt(req.params.number1),
+    operand2: parseInt(req.params.number2),
+    solution: parseInt(req.params.number1) / parseInt(req.params.number2)
+  }
+    var mult = {
+    operator: req.params.operation,
+    operand1: parseInt(req.params.number1),
+    operand2: parseInt(req.params.number2),
+    solution: parseInt(req.params.number1) * parseInt(req.params.number2)
+  }
+if (req.params.operation == "add") {
+  res.send(add);
+}
+if (req.params.operation == "sub") {
+  res.send(sub);
+}
+if (req.params.operation == "mult") {
+  res.send(mult);
+}
+if (req.params.operation == "div") {
+  res.send(div);
+}
 });
 
 
