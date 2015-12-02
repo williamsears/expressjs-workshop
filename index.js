@@ -4,8 +4,9 @@ var app = express();
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
-app.get('/hello', function (req, res) {
-  res.send('<h1>HelloWorld!</h1>');
+app.get('/hello/:firstname', function (req, res) {
+  var name = req.params.firstname;
+  res.send('<h1>Hello' + name + '</h1>');
 });
 
 
