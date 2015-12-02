@@ -8,6 +8,15 @@ app.get('/hello/:firstname', function (req, res) {
   var name = req.params.firstname;
   res.send('<h1>Hello' + name + '</h1>');
 });
+app.get('/op/:operation/:number1/:number2', function (req, res) {
+  var name = {
+    operator: req.params.operation,
+    operand1: parseInt(req.params.number1),
+    operand2: parseInt(req.params.number2),
+    solution: parseInt(req.params.number1) + parseInt(req.params.number2)
+  }
+  res.send(name);
+});
 
 
 
